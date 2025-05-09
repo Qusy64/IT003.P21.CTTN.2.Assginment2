@@ -10,11 +10,11 @@ MSSV: 24521492
 Bài này ta sẽ tìm giá trị vị trí chỗ ngồi của Alice, rồi sau đó chọn vị trí cho Bob bằng cách lấy vị trí của Alice ± k.
 ## Point3D:
 Bài này ta sẽ sắp xếp theo đề bài yêu cầu
-```
+``` c++
 map<int, map<int, vector<int>, greater<int>>> b;
 ```
 Lúc này ta đã có x được sắp xếp tăng dần và y sắp xếp giảm dần.
-```
+``` c++
 for(auto &p : b){
         int x = p.first;
         for ( auto &q : p.second){
@@ -40,7 +40,7 @@ Ta sẽ dùng Quicksort để sắp xếp lại mảng, sau đó xuất ra giá 
 Bài này ta sẽ sắp xếp lại mảng sau đó đếm số phần tử phân biệt.
 ## MergeSort:
 Sử dụng thuật toán MergeSort
-```
+``` c++
 void Merge(vector<int> &a , int left , int mid, int right){
     int n = a.size();
     int n1 = mid - left + 1;
@@ -101,7 +101,7 @@ void MergeSort(vector<int>& a, int left, int right){
 ```
 ## InsertionSort:
 Sử dụng thuật toán InsertionSort
-```
+``` c++
 void InsertionSort( vector<int> &a, int n){
     for (int i = 1; i < n; i++){
         int key = a[i]; // Đặt key có giá trị bằng phần tử đang xét
@@ -124,7 +124,7 @@ void InsertionSort( vector<int> &a, int n){
 ```
 ## BubbleSort:
 Sử dụng thuật toán BubbleSort
-```
+``` c++
 void BubbleSort( vector<int>& a, int n){ // Đưa dần những phần tử lớn nhất về sau mảng
     for ( int i = 0; i < n-1; i++){
         for ( int j= 0; j< n-1-i; j++){
@@ -141,7 +141,7 @@ void BubbleSort( vector<int>& a, int n){ // Đưa dần những phần tử lớ
 ```
 ## SelectionSort:
 Sử dụng thuật toán SelectionSort
-```
+``` c++
 void SelectionSort( vector<int>& a, int n){
     for ( int i = 0; i < n-1 ; i++){
         int min_index = i; // Với từng giá trị i, ta sẽ sắp xếp phần tử nhỏ lên trước
