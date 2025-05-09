@@ -10,7 +10,7 @@ MSSV: 24521492
 Đầu tiên ta sẽ sắp xếp tăng dần giá trị các món quà. Sau đó ta tính số lần món quà có giá trị aᵢ được Alice chọn ( là số lớn nhất trong dãy k phần tử ) và số lần món quà có giá trị aᵢ được Bob chọn ( là số bé nhất trong dãy k phần tử )
 - Ta thấy số lần aᵢ được Alice chọn là : **C(i−1,k−1)**  tương ứng với số cách chọn k-1 phần tử bé hơn aᵢ
 - Ta thấy số lần aᵢ được Bob chon là : **C(n-i,k−1)** tương ứng với số cách chọn k-1 phần tử lớn hơn aᵢ
-```
+``` c++
 for ( long long i = 1; i <= n ; i++){// Ta xét qua các phần tử mảng a[]
         if (i - 1 >= k - 1){
             solve = (solve + (a[i] * C(i - 1, k - 1))) % p;// Nếu phần tử thứ i có thể là giá trị của món quà do Alice chọn, ta nhân giá trị món quà với số lần bằng số cách chọn k-1 phần tử trong i-1 phần tử trước đó
@@ -36,7 +36,7 @@ $$ k_1 + k_2 \leq 2k \leq k_1 + 2k_2 $$
 
 ## Vượt mức Pickleball v2:
 Ta tìm giá trị trung vị bằng cách
-```
+``` c++
 int timtrungvi( int n ){ 
     int trungvi = 0;
     for ( int i = 0; i < 201; i++){
@@ -56,7 +56,7 @@ Tổng quát thì bài này ta dùng [Cycle Detection](https://www.geeksforgeeks
 Với bài toán này, ta sẽ đếm số dãy không giảm có độ dài N.
 Dựa trên bài toán [chia kẹo Euler](https://viblo.asia/p/bai-toan-chia-keo-euler-L4x5xqvqKBM), ta có thể dễ dàng có được công thức tính số dãy nói trên. Nhưng lúc này ta có một vấn đề khác đó là $$ aᵢ \leq 10^{10} $$
 Cho nên ta sẽ dùng định lí [Lucas](https://wiki.vnoi.info/translate/he/Lucas-theorem) để tính.
-```
+``` c++
 // Biểu diễn n trong cơ số p
 vector<int> getRepresentation(int n, int p) { 
     vector<int> res;
